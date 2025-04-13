@@ -4,7 +4,7 @@ feilds
 - near_account_id
 - public_key
 - private_key
-- network_id - testnet, mainent - optional
+- network_id - testnet, mainent
 
 
 ```json
@@ -15,6 +15,15 @@ feilds
     "network_id": "mainnet" // optional
 }
 ```
+
+### Using OpenSSL
+
+```sh
+sudo apt install openssl  # Debian-based (Ubuntu)
+brew install openssl      # macOS (Homebrew)
+```
+
+
 
 ---
 
