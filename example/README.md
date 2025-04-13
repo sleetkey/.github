@@ -1,4 +1,4 @@
-# Examples
+# Examples (outdated)
 
 feilds
 - near_account_id
@@ -40,6 +40,21 @@ DECRYPTED_KEY=$(echo "$ENCRYPTED_KEY" | openssl enc -d -aes-256-cbc -pbkdf2 -a -
 # Display the decrypted key
 echo "Decrypted private key: $DECRYPTED_KEY"
 ```
+
+---
+
+# Outdated:
+### the very minimum, how you can use sleet key
+sleet key can be thought of as a standard way to encrypt your near private key and save it locally on your device, you can do it with a number of different tools. We provide examples using OpenSSL CLI to securely encrypt your private key with a password and store it in a JSON file. You can then use this encrypted key to authenticate with NEAR dApps and un-encrypt with password when you need to sign a transaction.
+
+### how developers can make apps that you can log into with sleet key
+Developers can integrate Sleet Key authentication by implementing the following flow:
+1. Prompt users to upload their encrypted JSON key file
+2. Request the user's decryption password
+3. Decrypt the private key using OpenSSL or crypto-js
+4. Use the decrypted key to authenticate with NEAR Protocol
+5. Implement proper security measures to handle the decrypted key in memory
+6. Provide clear instructions for users to rotate their keys if needed
 
 
 ---
