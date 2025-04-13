@@ -23,6 +23,12 @@ sudo apt install openssl  # Debian-based (Ubuntu)
 brew install openssl      # macOS (Homebrew)
 ```
 
+```sh
+# To encrypt
+openssl enc -aes-256-cbc -salt -pbkdf2 -in example.near.json -out example.near.enc -k 'your_password'
+# To decrypt
+openssl enc -d -aes-256-cbc -pbkdf2 -in example.near.enc -out example.near.json -k 'your_password'
+```
 
 
 ---
