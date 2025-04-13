@@ -33,7 +33,6 @@ jq --arg encrypted_key "$ENCRYPTED_KEY" '.private_key = $encrypted_key' example.
 
 ```sh
 # Extract and decrypt the private key
-# Corrected decryption command
 ENCRYPTED_KEY=$(jq -r '.private_key' example.near.json)
 DECRYPTED_KEY=$(echo "$ENCRYPTED_KEY" | openssl enc -d -aes-256-cbc -pbkdf2 -a -k 'your_password')
 
